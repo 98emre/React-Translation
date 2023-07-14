@@ -1,6 +1,11 @@
 
-import { useForm } from "react-hook-form"
+import { set, useForm } from "react-hook-form"
 import { useUser } from "../../context/UserContext"
+import { loginUser } from "../../api/user"
+import { useEffect, useState } from "react"
+import { storageSave } from "../../utils/storage"
+import { STORAGE_USER_KEY } from "../../utils/storageKey"
+import {Navigate, useNavigate} from "react-router-dom"
 
 const userConfig = {
     required: true,
@@ -8,12 +13,43 @@ const userConfig = {
 }
 
 const LoginForm = () => {
- 
+
+    
+    // Hooks
     const { register, handleSubmit, formState: {errors} } = useForm()
     const {user, setUser } = useUser()
+    const navigate = useNavigate()
 
-    const onSubmit = (data) =>{
-        console.log(data)
+    useEffect(()=>{
+        if(user !== null) {
+            navigate("/profile")
+        }
+
+    },[user,navigate])
+
+
+
+    // Local state
+    const [apiError, setApiError] = useState(null);
+    const [loading,setLoading] = useState(false)
+     
+
+
+    // Event handler
+    const onSubmit = async ({username}) =>{
+        setLoading(true)
+        const [error, userResponse] = await loginUser(username);
+        
+        if(error !== null){
+            setApiError(error)
+        }
+    
+        if(userResponse !== null) {
+            storageSave(STORAGE_USER_KEY,userResponse)
+            setUser(userResponse)
+        }
+        
+        setLoading(false)
     }
 
     const errorMessage = (() => {
@@ -30,10 +66,13 @@ const LoginForm = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
             <fieldset>
                 <label htmlFor="username">Username: </label>
-                <input type="text" placeholder="username" {...register("username",userConfig)} />
+                <input type="text" placeholder="username" {...register("username", userConfig)} />
                 {errorMessage}
             </fieldset>
-            <button>Login</button>
+            <button type="submit" disabled={loading}>Login</button>
+
+            {apiError && <p>Api error: {apiError}</p>}
+            {loading && <p>Loading.....</p>}
 
         </form>
     )
