@@ -1,3 +1,4 @@
+import withAuth from "../component/hoc/withAuth"
 
 
 
@@ -11,4 +12,4 @@ const Translation = () => {
     )
 }
 
-export default Translation
+export default withAuth(Translation)
