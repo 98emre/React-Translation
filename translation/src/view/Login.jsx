@@ -1,10 +1,12 @@
+import LoginForm from "../component/Login/LoginForm"
 
 
 const Login = () => {
     
     return (
-        <>
-            <p>Login View</p>
+        <>  
+            <h3>Login</h3>
+            <LoginForm />
         </>
     )
 }
