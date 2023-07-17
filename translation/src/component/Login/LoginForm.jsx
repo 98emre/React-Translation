@@ -5,7 +5,7 @@ import { loginUser } from "../../api/user"
 import { useEffect, useState } from "react"
 import { storageSave } from "../../utils/storage"
 import { STORAGE_USER_KEY } from "../../utils/storageKey"
-import {Navigate, useNavigate} from "react-router-dom"
+import { useNavigate} from "react-router-dom"
 
 const userConfig = {
     required: true,
@@ -22,7 +22,7 @@ const LoginForm = () => {
 
     useEffect(()=>{
         if(user !== null) {
-            navigate("/profile")
+            navigate("profile")
         }
 
     },[user,navigate])
