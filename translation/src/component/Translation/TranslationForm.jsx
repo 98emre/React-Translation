@@ -35,7 +35,7 @@ const TranslationForm = ({onTranslation}) => {
           {errorMessage}
         </fieldset>
 
-        <button type="submit">Translation</button>
+        <button type="submit" className="btn-primary">Translation</button>
       </form>
     </>
   );

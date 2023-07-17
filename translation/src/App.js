@@ -4,7 +4,6 @@ import Profile from "./view/Profile"
 import Translation from "./view/Translation"
 import Navbar from "./component/Navbar/Navbar";
 
-
 function App() {
 
   return (    
