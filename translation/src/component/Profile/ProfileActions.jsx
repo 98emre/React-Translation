@@ -1,26 +1,48 @@
+import { translationClearHistory } from "../../api/translation"
 import { useUser } from "../../context/UserContext"
+import { storageDelete, storageSave } from "../../utils/storage"
+import { STORAGE_USER_KEY } from "../../utils/storageKey"
 
 
 
 
 const ProfileActions = () => {
 
-    const {user } = useUser()
+    const {user, setUser } = useUser()
 
-    const handleClearHistoryClick = () => {
+    const handleClearHistoryClick = async () => {
+        if(!window.confirm("Are you sure you want to clear?")){
+            return
+        }
 
+        const [error] = await translationClearHistory(user.id)
+
+        if(error !== null)
+            return
+        
+        
+        const updateUser = {
+            ... user,
+            translations: []
+        }
+        
+        storageSave(STORAGE_USER_KEY,updateUser)
+        setUser(updateUser)
     }
 
     const handleLogoutClick = () => {
-
+        if(window.confirm("Are your sure?")){
+            storageDelete(STORAGE_USER_KEY)
+            setUser(null)
+        }
     }
     
     return (
         <>
             <p>ProfileActions</p>
             <ul>
-                <li><button>Clear History</button></li>
-                <li><button>Logout</button></li>
+                <li><button onClick={handleClearHistoryClick}>Clear History</button></li>
+                <li><button onClick={handleLogoutClick}>Logout</button></li>
             </ul>
 
         </>

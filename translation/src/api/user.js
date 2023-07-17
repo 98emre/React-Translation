@@ -39,7 +39,7 @@ const checkForUser = async (username) => {
     
         return [null, data];
       } catch (error) {
-        return [error.message, []];
+        return [error.message, null ];
       }
     };
   
