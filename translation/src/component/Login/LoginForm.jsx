@@ -9,7 +9,8 @@ import { useNavigate} from "react-router-dom"
 
 const userConfig = {
     required: true,
-    minLength: 4
+    minLength: 4,
+    maxLength: 15
 }
 
 const LoginForm = () => {
@@ -58,8 +59,9 @@ const LoginForm = () => {
         }
 
         if( errors.username.type === "required") return <span> Username is required </span>
-
         if(errors.username.type === "minLength") return <span> Username required min length 4</span>
+        if(errors.username.type === "maxLength") return <span> Username max length is 15</span>
+
     })()
 
     return (
@@ -69,7 +71,7 @@ const LoginForm = () => {
                 <input type="text" placeholder="username" {...register("username", userConfig)} />
                 {errorMessage}
             </fieldset>
-            <button type="submit" disabled={loading}>Login</button>
+            <button type="submit" className="btn btn-primary" disabled={loading}>Login</button>
 
             {apiError && <p>Api error: {apiError}</p>}
             {loading && <p>Loading.....</p>}
