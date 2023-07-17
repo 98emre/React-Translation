@@ -3,11 +3,11 @@
 
 
 
-const ProfileTranslationHistoryItem = () => {
+const ProfileTranslationHistoryItem = ({translation}) => {
     
     return (
         <>
-            <p>ProfileTranslationHistoryItem</p>
+            <li>{translation}</li>
         </>
     )
 }

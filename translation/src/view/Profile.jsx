@@ -1,19 +1,21 @@
+import ProfileActions from "../component/Profile/ProfileActions"
+import ProfileHeader from "../component/Profile/ProfileHeader"
+import ProfileTranslationHistory from "../component/Profile/ProfileTranslationHistory"
 import withAuth from "../component/hoc/withAuth"
+import { useUser } from "../context/UserContext"
 
 
 
 const Profile = () => {
+
+    const {user} = useUser()
+
     
     return (
-        <>
-            <p>Profile View</p>
-            {
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                </ul>
-            }
-            <button>Clear History</button>
+        <>            
+            <ProfileHeader username = {user.username} />
+            <ProfileActions />
+            <ProfileTranslationHistory translations= {user.translations} />
         </>
     )
 }
