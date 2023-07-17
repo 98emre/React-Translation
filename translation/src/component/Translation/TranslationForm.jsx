@@ -4,7 +4,6 @@ const TranslationForm = ({onTranslation}) => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = ({translations}) => {
-    console.log(translations)
     onTranslation(translations)
   };
 

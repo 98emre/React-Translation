@@ -5,6 +5,7 @@ import { addTranslation } from "../api/translation";
 import { useUser } from "../context/UserContext";
 import { STORAGE_USER_KEY } from "../utils/storageKey";
 import { storageSave } from "../utils/storage";
+import TranslationDisplay from "../component/Translation/TranslationDisplay";
 
 const Translation = () => {
   const [translation, setTranslation] = useState("");
@@ -35,8 +36,8 @@ const Translation = () => {
       <section id="translations">
         <TranslationForm onTranslation={handleTranslation} />
       </section>
-      {!translation && <p>No Translation</p>}
-      {translation && <p>{translation}</p>}
+      <TranslationDisplay translations = {translation}/>
+  
     </>
   );
 };
