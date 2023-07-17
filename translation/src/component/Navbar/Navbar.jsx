@@ -14,8 +14,8 @@ const Navbar = () => {
                 <h1>Translation Page</h1>
             </ul>
             {user && <ul>
-                <li> <NavLink to="/">Translate Page</NavLink> </li>
                 <li> <NavLink to="/profile">Profile</NavLink> </li>
+                <li> <NavLink to="/translate">Translate</NavLink> </li>
             </ul>}
         </nav>
     )
