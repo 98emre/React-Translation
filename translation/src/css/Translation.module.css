@@ -1,0 +1,69 @@
+
+
+.bounceAnim {
+
+    animation-name: bounce;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    opacity: 0;
+  }
+  
+
+@keyframes bounce {
+    0% {
+      transform: translateY(0px);
+    }
+    20%{
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100%{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  .unSelectable {
+    
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+  
+  .border{
+    border: thick solid green;
+  }
+
+  .inputField{
+    padding: 5px;
+    /*
+    font-size: 3vw;
+    */
+    width: 50%;
+    height: 100px;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:15px;
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+    background-color: lightgrey;
+    }
+    
+  .handSigns{
+    max-width: 10%;
+    max-height: 10%;
+  }
+
+  .translationContainer { 
+    background-color: lightgreen;
+    
+    border: thick solid grey; 
+    border
+    border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+    border-
+}
