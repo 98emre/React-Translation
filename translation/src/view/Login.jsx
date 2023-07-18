@@ -1,18 +1,6 @@
 import LoginForm from "../component/Login/LoginForm";
 
 const Login = () => {
-<<<<<<< HEAD
-=======
-    
-    return (
-        <>  
-            <h3 >Login</h3>
-            <LoginForm />
-        </>
-    )
-}
->>>>>>> Fredrik
-
   return (
     <div className="loginContainer">
       <div className="loginForm">
