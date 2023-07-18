@@ -1,6 +1,5 @@
 
 
-import { useContext } from "react"
 import { NavLink } from "react-router-dom"
 import { useUser } from "../../context/UserContext"
 
@@ -9,15 +8,14 @@ const Navbar = () => {
     const {user} = useUser()
     
     return (
-        <nav>
-            <ul>
-                <h1>Translation Page</h1>
-            </ul>
+        <>
+            <nav>
             {user && <ul>
                 <li> <NavLink to="/profile">Profile</NavLink> </li>
                 <li> <NavLink to="/translate">Translate</NavLink> </li>
-            </ul>}
-        </nav>
+             </ul>}
+            </nav>
+        </>
     )
 }
 

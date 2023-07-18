@@ -10,7 +10,6 @@ const translateConfig = {
 
 const TranslationForm = ({onTranslation}) => {
   const { register, handleSubmit , formState: {errors}  } = useForm();
-  const [counter,setCounter] = useState(0)
 
   const onSubmit = ({translations}) => {
     onTranslation(translations)
