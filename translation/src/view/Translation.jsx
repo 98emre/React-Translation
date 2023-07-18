@@ -6,6 +6,7 @@ import { useUser } from "../context/UserContext";
 import { STORAGE_USER_KEY } from "../utils/storageKey";
 import { storageSave } from "../utils/storage";
 import TranslationDisplay from "../component/Translation/TranslationDisplay";
+import styles from "../css/Translation.module.css"
 
 const Translation = () => {
   const [translation, setTranslation] = useState("");
@@ -32,11 +33,15 @@ const Translation = () => {
 
   return (
     <>
-      <p>Translation View</p>
-      <section id="translations">
-        <TranslationForm onTranslation={handleTranslation} />
-      </section>
-      <TranslationDisplay translations = {translation}/>
+      <div className="container text-center">
+        <h3>Translation View</h3>
+      </div>
+      <div className="container p-3">
+          <TranslationForm onTranslation={handleTranslation} />
+        </div>
+      <div className={`container ${styles.translationContainer}  height-50 p-3`}>
+        <TranslationDisplay translations = {translation}/>
+      </div>
   
     </>
   );

@@ -1,5 +1,10 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import styles from '../../css/Translation.module.css';
+
+
+
+
 
 
 const translateConfig = {
@@ -14,6 +19,8 @@ const TranslationForm = ({onTranslation}) => {
 
   const onSubmit = ({translations}) => {
     onTranslation(translations)
+    //document.getElementById("translationForm").reset();
+
   };
 
   const errorMessage = (() => {
@@ -28,14 +35,11 @@ const TranslationForm = ({onTranslation}) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <fieldset>
-          <label htmlFor="translations">Translations </label>
-          <input type="text" {...register("translations", translateConfig)} placeholder="text" />
-          {errorMessage}
-        </fieldset>
-
-        <button type="submit" className="btn-primary">Translation</button>
+      <form id="translationForm" className="d-flex flex-column align-items-center" onSubmit={handleSubmit(onSubmit)}>
+        <label htmlFor="translations" className="form-label"></label>
+        <input type="text" {...register("translations", translateConfig)} className={`${styles.inputField} mb-3 input-lg`} placeholder="text" />
+        <button type="submit" className="btn btn-primary">Translate</button>
+        {errorMessage}
       </form>
     </>
   );
