@@ -24,27 +24,47 @@ const Translation = () => {
         alert("Translation Error " + error)
         return;
     }
+    console.log("handleAnim");
+    const translationCont = document.getElementById("translationContainer");
+    translationCont.style.animationPlayState = "running";
+
+    const robotLogo = document.getElementById("robotLogoTranslation");
+    robotLogo.style.animationPlayState = "running";
+    console.log("handleAnim2", translation.split("").length);
+
+    function resetAnimationDuration() {
+      translationCont.style.animationPlayState = "paused";
+      robotLogo.style.animationPlayState = "paused";
+
+
+    }
     
+    setTimeout(resetAnimationDuration, (translation.split("").length * 0.2) * 1000);     
+    
+
     setTranslation(translation)
     storageSave(STORAGE_USER_KEY,updateUser)
     setUser(updateUser)
 
   }
-
   return (
     <>
       <div className="container text-center">
-        <h3>Translation View</h3>
+        <img id="robotLogoTranslation" src="Logo2.png" className={`${styles.imgLogo} ${styles.jumpAnim}`}/>
       </div>
       <div className="container p-3">
           <TranslationForm onTranslation={handleTranslation} />
         </div>
-      <div className={`container ${styles.translationContainer}  height-50 p-3`}>
+      <div id="translationContainer" className={`container ${styles.translationContainer} p-4`}>
         <TranslationDisplay translations = {translation}/>
       </div>
   
     </>
   );
 };
+
+function addSpeed(el, speed){
+
+}
 
 export default withAuth(Translation);

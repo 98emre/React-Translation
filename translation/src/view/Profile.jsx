@@ -6,13 +6,22 @@ import withAuth from "../component/hoc/withAuth";
 import { useUser } from "../context/UserContext";
 
 const Profile = () => {
-  const { user,setUser } = useUser();
-  
+  const { user, setUser } = useUser();
+
   return (
     <>
-      <ProfileHeader username={user.username} />
-      <ProfileActions />
-      <ProfileTranslationHistory translations={user.translations} />
+      <div className="container text-center p-1">
+        <ProfileHeader username={user.username} />
+      </div>
+      <div className="container text-center p-3">
+        <ProfileActions />
+      </div>
+      <div className="container text-center p-3">
+        <ProfileTranslationHistory
+          className="container"
+          translations={user.translations}
+        />
+      </div>
     </>
   );
 };
