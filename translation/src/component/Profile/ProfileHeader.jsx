@@ -1,13 +1,9 @@
+const ProfileHeader = ({ username }) => {
+  return (
+    <>
+      <h3>Hello, Welcome {username}</h3>
+    </>
+  );
+};
 
-
-
-const ProfileHeader = ({username}) => {
-    
-    return (
-        <>
-            <p>Hello, Welcome {username}</p>
-        </>
-    )
-}
-
-export default ProfileHeader
+export default ProfileHeader;

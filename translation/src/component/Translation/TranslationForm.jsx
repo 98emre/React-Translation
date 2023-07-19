@@ -37,7 +37,7 @@ const TranslationForm = ({onTranslation}) => {
       <form id="translationForm" className="d-flex flex-column align-items-center" onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="translations" className="form-label"></label>
         <input type="text" {...register("translations", translateConfig)} className={`${styles.inputField} mb-3 input-lg`} placeholder="text" />
-        <button type="submit" className="btn btn-primary">Translate</button>
+        <button type="submit" className="btn btn-outline-primary btn-lg btn-block">Translate</button>
         {errorMessage}
       </form>
     </>
