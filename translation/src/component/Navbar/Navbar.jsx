@@ -26,6 +26,7 @@ const Navbar = () => {
                     </Dropdown.Menu>
               </Dropdown>
             </ul>
+                <h1 className="navBarTitle">Lost In Translation</h1>
           </div>
         )}
       </nav>
