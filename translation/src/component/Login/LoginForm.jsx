@@ -70,8 +70,8 @@ const LoginForm = () => {
         
         <div className="row mb-3 justify-content-center">
           <div className="col-6">
-            <input type="text" className="form-control" placeholder="What's your name?" {...register("username", userConfig)} />
-            {<h6 className="text-danger">{errorMessage}</h6>}
+            <input type="text" className="form-control inputText" placeholder="What's your name?" {...register("username", userConfig)} />
+            {<p className="text-danger">{errorMessage}</p>}
           </div>
         </div>
 
