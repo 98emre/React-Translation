@@ -35,6 +35,7 @@ const ProfileActions = () => {
     <>
       <div>
         <button className="btn-primary" onClick={handleClearHistoryClick}>Clear History</button>
+        <br></br>
         <button className="btn-primary" onClick={handleLogoutClick}>Logout</button>
       </div>
     </>
