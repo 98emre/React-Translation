@@ -56,7 +56,6 @@ const Navbar = () => {
               <h1 className="navBarTitle">Lost In Translation</h1>
             </div>
           </nav>
-          <br />
         </>
       )}
     </>

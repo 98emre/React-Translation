@@ -47,7 +47,9 @@ const Translation = () => {
 
   }
   return (
-    <div className="container">
+    <>
+   <div className={styles.container}>
+      <br/>
       <div className="container text-center">
         <img id="robotLogoTranslation" src="Logo2.png" className={`${styles.imgLogo} ${styles.jumpAnim}`}/>
       </div>
@@ -61,6 +63,7 @@ const Translation = () => {
       </div>
   
     </div>
+    </>
   );
 };
 
