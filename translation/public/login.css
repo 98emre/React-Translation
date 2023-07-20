@@ -70,12 +70,17 @@
   color: #ffffff;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 550px) {
   .loginContainer {
     padding: 10px; 
   }  
 
   .loginForm {
+    margin: 10% 1%;
+  }
+
+  .inputText{
+    padding: 15px;
     margin: 10% 1%;
   }
 }

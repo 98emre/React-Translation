@@ -13,7 +13,6 @@ const Translation = () => {
 
   const { user, setUser } = useUser()
 
-
   const handleTranslation = async (translation) => {
     if(user.translations.length >= 10){
       user.translations.shift();
@@ -48,18 +47,20 @@ const Translation = () => {
 
   }
   return (
-    <>
+    <div className="container">
       <div className="container text-center">
         <img id="robotLogoTranslation" src="Logo2.png" className={`${styles.imgLogo} ${styles.jumpAnim}`}/>
       </div>
+      
       <div className="container p-3">
           <TranslationForm onTranslation={handleTranslation} />
-        </div>
+      </div>
+
       <div id="translationContainer" className={`container ${styles.translationContainer} p-4`}>
         <TranslationDisplay translations = {translation}/>
       </div>
   
-    </>
+    </div>
   );
 };
 
