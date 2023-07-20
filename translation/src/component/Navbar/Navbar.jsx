@@ -19,8 +19,8 @@ const Navbar = () => {
     <>
       {user && (
         <>
-          <nav class="navbar navbar-dark bg-dark">
-            <div class="container">
+          <nav className="navbar navbar-dark bg-dark">
+            <div className="container">
               <ul className="navItems">
                 <Dropdown 
                     show={dropDownStatus}
