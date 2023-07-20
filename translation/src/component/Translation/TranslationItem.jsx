@@ -27,6 +27,7 @@ const TranslationItem = ({ letter, animIndex }) => {
     }, 100);
 
     const handleMouseOver = () => {
+      target.style.opacity = 0.5;
       console.log("letter: " + letter);
       spanText.style.left = `${
         getOffset(event.target).left +
@@ -38,6 +39,8 @@ const TranslationItem = ({ letter, animIndex }) => {
     };
 
     const handleMouseOut = () => {
+      
+      target.style.opacity = 1;
       spanText.style.opacity = 0;
     };
 

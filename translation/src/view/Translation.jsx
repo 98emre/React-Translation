@@ -67,8 +67,4 @@ const Translation = () => {
   );
 };
 
-function addSpeed(el, speed){
-
-}
-
 export default withAuth(Translation);

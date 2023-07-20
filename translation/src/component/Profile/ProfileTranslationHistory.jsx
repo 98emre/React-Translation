@@ -31,10 +31,10 @@ const ProfileTranslationHistory = ({ translations }) => {
   return (
     <>
       <section>
-        <h4>Your History</h4>
-        <ul className="list-group p-3">
+        <h4 className="loginBigText">Your History</h4>
+        <ul className="list-group">
           {translations.length > 0 && availableTranslations}
-          {translations.length === 0 && <p>Empty translation list of</p>}
+          {translations.length === 0 && <p className="text-danger">Empty translation list</p>}
         </ul>
         <div className="p-3 border">
           {selectedTranslation.length > 0 &&

@@ -6,7 +6,7 @@ const ProfileTranslationHistoryItem = ({ translation, onToggle }) => {
     <>
       <li
         className={
-          "list-group-item list-group-item-action list-group-item-primary fs-2"
+          "list-group-item list-group-item-action list-group-item-warning fs-4"
         }
         onClick={handleClick}
       >

@@ -12,10 +12,10 @@ const Profile = () => {
   return (
     <>
       <div className={styles.container}>
-        <div className="container text-center p-1">
+        <div className="container text-center p-3">
           <ProfileHeader username={user.username} />
         </div>
-        <div className="container text-center p-3">
+        <div className="container text-center">
           <ProfileActions />
         </div>
         <div className="container text-center p-3">

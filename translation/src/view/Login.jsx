@@ -14,7 +14,7 @@ const Login = () => {
 
           <div className="row mb-3 justify-content-center">
             <h5 className="col-8 text-center">
-              <img className="loginFormImage shadowContainer" src="Logo.png" alt="Icon" width={150} /> <br />
+              <img className="loginFormImage shadowContainer" src="Logo2.png" alt="Icon" width={150} /> <br />
             </h5>
           </div>
 
