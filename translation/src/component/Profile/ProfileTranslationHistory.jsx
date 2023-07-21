@@ -7,10 +7,11 @@ const ProfileTranslationHistory = ({ translations }) => {
 
   const handleToggle = (additionalInfo) => {
     setSelectedTranslation(additionalInfo);
-    console.log(`Toggled with additional info: ${additionalInfo}`);
   };
 
-  const availableTranslations = translations.map((translation, index) => {
+  const availableTranslations = translations
+  .toReversed()
+  .map((translation, index) => {
     return (
       <ProfileTranslationHistoryItem
         key={index + "-" + translation}
@@ -20,7 +21,7 @@ const ProfileTranslationHistory = ({ translations }) => {
     );
   });
 
-  const renderTranslation = selectedTranslation
+  const renderTranslationSigns = selectedTranslation
     .split("")
     .map((_letter, index) => {
       const key = `${index}-${_letter}-${Math.random()}`;
@@ -34,12 +35,14 @@ const ProfileTranslationHistory = ({ translations }) => {
         <h4 className="loginBigText">Your History</h4>
         <ul className="list-group">
           {translations.length > 0 && availableTranslations}
-          {translations.length === 0 && <p className="text-danger">Empty translation list</p>}
+          {translations.length === 0 && (
+            <p className="text-danger">Empty translation list</p>
+          )}
         </ul>
         <div className="p-3 border">
           {selectedTranslation.length > 0 &&
             translations.length > 0 &&
-            renderTranslation}
+            renderTranslationSigns}
         </div>
       </section>
     </>
