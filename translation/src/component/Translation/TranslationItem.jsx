@@ -2,11 +2,6 @@ import { createElement } from "react";
 import styles from "../../css/Translation.module.css";
 
 const TranslationItem = ({ letter, animIndex }) => {
-  const handleAnimationLetterEnd = (event) => {
-    const target = event.target;
-    target.classList.remove(styles.bounceAnim);
-  };
-
   const handleAnimationLetterStart = (event) => {
     const target = event.target;
 
@@ -39,13 +34,16 @@ const TranslationItem = ({ letter, animIndex }) => {
     };
 
     const handleMouseOut = () => {
-      
       target.style.opacity = 1;
       spanText.style.opacity = 0;
     };
 
     target.addEventListener("mouseover", handleMouseOver);
     target.addEventListener("mouseout", handleMouseOut);
+  };
+
+  const handleAnimationLetterEnd = (event) => {
+    event.target.classList.remove(styles.bounceAnim);
   };
 
   const handleAnimationTextEnd = (event) => {

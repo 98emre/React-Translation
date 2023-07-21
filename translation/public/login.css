@@ -133,10 +133,10 @@
   
 @keyframes blinkBorder {
     0%, 100% {
-      border-color: yellow; /* Set the border color to yellow */
+      border-color: yellow; 
     }
     50% {
-      border-color: transparent; /* Set the border color to transparent */
+      border-color: transparent; 
     }
 }
 

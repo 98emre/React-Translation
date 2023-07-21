@@ -112,13 +112,13 @@
   
   border: 5px solid yellow;
   border-radius: 5%;  
-  animation: blinkBorder 2.5s infinite;
   background: repeating-linear-gradient(90deg, rgb(65, 237, 151), rgb(192, 217, 240), rgb(33, 223, 245), rgb(192, 217, 240),  rgb(65, 237, 151));
   background-repeat: repeat-x;
   background-size: 400% 100%;
-  animation-play-state: paused;
   animation: gradientAnim linear infinite;
   animation-duration: 1.5s;
+  animation-play-state: paused;
+
 }
 
 @keyframes gradientAnim {
