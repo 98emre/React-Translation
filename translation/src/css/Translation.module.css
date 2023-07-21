@@ -1,5 +1,3 @@
-
-
 .container {
   background: linear-gradient(to bottom left, #4aede2, #b7babb);
   min-height: 100vh;
@@ -47,17 +45,21 @@
   text-align: center;
   width: 100%;
   height: 100px;
+  background-image: repeating-linear-gradient(130deg, black, grey, black);
+
+  border-radius: 10%;
   
-  border-radius: 10%;  
+  color: rgb(245, 236, 58);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
-  background-color: repeating-linear-gradient(90deg, black, blue, black);
 }
 
-.inputField:focus{
-  
+.inputField:focus {
+  padding: 15px;
   border: 5px solid yellow;
   animation: blinkBorder 2.5s infinite;
 }
@@ -72,10 +74,11 @@
   font-size: 250%;
   pointer-events: none;
   font-family: Arial, Helvetica, sans-serif;
-  text-decoration:solid;
-  color:rgb(245, 236, 58);
+  text-decoration: solid;
+  color: rgb(245, 236, 58);
   transition: opacity 0.3s ease-in-out;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .textAnim {
@@ -85,7 +88,7 @@
   animation-iteration-count: 1;
   opacity: 0;
   scale: 1;
-  color:rgb(245, 236, 58);
+  color: rgb(245, 236, 58);
 }
 
 @keyframes textBounce {
@@ -109,16 +112,21 @@
 }
 
 .translationContainer {
-  
   border: 5px solid yellow;
-  border-radius: 5%;  
-  background: repeating-linear-gradient(90deg, rgb(65, 237, 151), rgb(192, 217, 240), rgb(33, 223, 245), rgb(192, 217, 240),  rgb(65, 237, 151));
+  border-radius: 5%;
+  background: repeating-linear-gradient(
+    90deg,
+    rgb(65, 237, 151),
+    rgb(192, 217, 240),
+    rgb(33, 223, 245),
+    rgb(192, 217, 240),
+    rgb(65, 237, 151)
+  );
   background-repeat: repeat-x;
   background-size: 400% 100%;
   animation: gradientAnim linear infinite;
   animation-duration: 1.5s;
   animation-play-state: paused;
-
 }
 
 @keyframes gradientAnim {
@@ -130,19 +138,17 @@
   }
 }
 
-
-.imgLogo{
+.imgLogo {
   max-width: 20%;
   max-height: 20%;
 }
 
-.jumpAnim{
+.jumpAnim {
   animation-name: jumpAnimation;
   animation: jumpAnimation linear infinite;
   animation-play-state: paused;
   animation-duration: 0.3s;
 }
-
 
 @keyframes jumpAnimation {
   0% {
@@ -157,7 +163,8 @@
 }
 
 @keyframes blinkBorder {
-  0%, 100% {
+  0%,
+  100% {
     border-color: yellow; /* Set the border color to yellow */
   }
   50% {
