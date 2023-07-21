@@ -1,4 +1,4 @@
-# Sign language translation React Website
+# Lost in translation
 
 A React website where you can translate from English to American sign language
 
