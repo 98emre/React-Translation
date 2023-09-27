@@ -5,13 +5,16 @@ A React website where you can translate from English to American sign language
 ## Screenshots
 
 ### Login Page
-![LoginReactAssignment](https://github.com/98emre/React-Translation/assets/37656342/7bd4e1c5-3eb3-419c-93f9-6226b206662e)
+
+![LoginReactAssignment](https://github.com/98emre/React-Translation/assets/37656342/35443eef-6218-4f24-a74f-76e910f539bb)
 
 ### Translate Page
-![TranslateReactAssignment](https://github.com/98emre/React-Translation/assets/37656342/729b0f4f-8d1a-4b3a-a3a6-d1f43084f5d3)
+
+![TranslateReactAssignment](https://github.com/98emre/React-Translation/assets/37656342/2eeed5f7-a7d5-43f4-9593-80e347134701)
 
 ### Profile Page
-![ProfileReactAssignment](https://github.com/98emre/React-Translation/assets/37656342/31a8cac6-92b4-4e5e-bf12-8fce00b5bee7)
+
+![ProfileReactAssignment](https://github.com/98emre/React-Translation/assets/37656342/091d2806-d07e-4164-9adc-5e00f8ba05a6)
 
 ## React Component Architecture
 
